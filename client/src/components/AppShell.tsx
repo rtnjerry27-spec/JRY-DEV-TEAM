@@ -1,15 +1,5 @@
 import { Link, useLocation } from "wouter";
-import {
-  ChevronLeft,
-  Code2,
-  Copy,
-  Github,
-  Home,
-  Menu,
-  Search,
-  X,
-  Box,
-} from "lucide-react";
+import { ChevronLeft, Code2, Copy, Home, Menu, Search, X } from "lucide-react";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { toast } from "sonner";
 import { tools, classNames } from "@/lib/toolkit";
@@ -139,12 +129,12 @@ export function AppShell({ children }: { children: ReactNode }) {
   const sidebar = (
     <aside className="flex h-full flex-col bg-[#0d1016]/95 px-3 py-4 backdrop-blur-xl">
       <Link href="/" className="mb-7 flex items-center gap-3 px-3">
-        <div className="grid size-9 place-items-center rounded-xl bg-gradient-to-br from-emerald-300 to-cyan-300 text-[#07100e] shadow-[0_0_24px_rgba(85,255,85,.18)]">
-          <Box className="size-5" strokeWidth={2.5} />
+        <div className="grid size-10 shrink-0 place-items-center overflow-hidden rounded-xl border border-amber-300/20 bg-black/20 shadow-[0_0_24px_rgba(255,180,50,.18)]">
+          <img src="/manus-storage/JRYDEV_ebbf68cc.png" alt="JRY DEV" className="size-full object-contain" />
         </div>
         <div>
-          <span className="font-display block text-base font-bold tracking-tight text-white">BlockForge</span>
-          <span className="block text-[9px] font-bold uppercase tracking-[0.17em] text-slate-600">Toolchain</span>
+          <span className="font-display block text-base font-bold tracking-tight text-white">JRY DEV</span>
+          <span className="block text-[9px] font-bold uppercase tracking-[0.17em] text-amber-200/60">Minecraft studio</span>
         </div>
       </Link>
       <nav className="space-y-1">
@@ -157,8 +147,8 @@ export function AppShell({ children }: { children: ReactNode }) {
         ))}
       </nav>
       <div className="mt-auto rounded-xl border border-white/[0.06] bg-white/[0.025] p-3">
-        <div className="flex items-center gap-2 text-xs font-semibold text-slate-300"><Code2 className="size-3.5 text-cyan-300" /> Toolkit v1.0</div>
-        <p className="mt-1.5 text-[11px] leading-4 text-slate-600">Built for the server room.</p>
+        <div className="flex items-center gap-2 text-xs font-semibold text-slate-300"><Code2 className="size-3.5 text-cyan-300" /> JRY DEV suite</div>
+        <p className="mt-1.5 text-[11px] leading-4 text-slate-600">Built for serious server rooms.</p>
       </div>
     </aside>
   );

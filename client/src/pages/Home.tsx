@@ -26,9 +26,9 @@ export default function Home() {
         <div className="relative px-6 py-12 sm:px-10 sm:py-16 lg:px-14 lg:py-20">
           <AccentTag color="emerald"><Sparkles className="mr-1.5 size-3" /> Minecraft server intelligence</AccentTag>
           <h1 className="font-display mt-5 max-w-2xl text-4xl font-bold leading-[0.98] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">
-            The ultimate server<br /><span className="text-gradient">developer toolkit.</span>
+            The ultimate server<br /><span className="text-gradient">developer studio.</span>
           </h1>
-          <p className="mt-5 max-w-xl text-sm leading-6 text-slate-300 sm:text-base">Everything you need to format, configure, optimize, and inspect your Minecraft Java server—built for the workflow between idea and deploy.</p>
+          <p className="mt-5 max-w-xl text-sm leading-6 text-slate-300 sm:text-base">JRY DEV brings your Minecraft Java workflow together: format, configure, optimize, discover plugins, and ship with confidence.</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#tools" className="inline-flex items-center gap-2 rounded-xl bg-emerald-300 px-4 py-2.5 text-sm font-bold text-[#07100e] shadow-[0_0_30px_rgba(85,255,85,.2)] transition hover:bg-emerald-200 active:scale-[.97]">Explore tools <ArrowRight className="size-4" /></a>
             <Link href="/server-status" className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-black/20 px-4 py-2.5 text-sm font-bold text-white backdrop-blur transition hover:bg-white/10 active:scale-[.97]"><Zap className="size-4 text-cyan-200" /> Check a server</Link>

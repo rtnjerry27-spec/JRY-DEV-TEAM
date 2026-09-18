@@ -2,13 +2,16 @@ import type { LucideIcon } from "lucide-react";
 import {
   Activity,
   Box,
+  BookOpen,
   Download,
   Gauge,
   ListTree,
   MessageSquareText,
   Palette,
+  Plug,
   Volume2,
 } from "lucide-react";
+import { soundRecords } from "@/data-sounds";
 
 export type ToolDefinition = {
   id: string;
@@ -92,6 +95,26 @@ export const tools: ToolDefinition[] = [
     icon: Download,
     accent: "emerald",
   },
+  {
+    id: "plugins",
+    path: "/plugins",
+    name: "Plugin Explorer",
+    shortName: "Plugins",
+    description: "Discover server plugins from Modrinth and jump to CurseForge results.",
+    tag: "Discovery",
+    icon: Plug,
+    accent: "aqua",
+  },
+  {
+    id: "guides",
+    path: "/guides",
+    name: "Admin Field Notes",
+    shortName: "Field Notes",
+    description: "Professional runbooks for launch checks, backups, updates, and incidents.",
+    tag: "Operations",
+    icon: BookOpen,
+    accent: "violet",
+  },
 ];
 
 export const legacyColors: Record<string, string> = {
@@ -112,21 +135,6 @@ export const legacyColors: Record<string, string> = {
   e: "#FFFF55",
   f: "#FFFFFF",
 };
-
-export const soundRecords = [
-  { key: "block.amethyst_block.chime", category: "Blocks", label: "Amethyst chime" },
-  { key: "block.note_block.pling", category: "Blocks", label: "Note block pling" },
-  { key: "block.portal.ambient", category: "Blocks", label: "Nether portal ambience" },
-  { key: "entity.experience_orb.pickup", category: "Entities", label: "Experience orb pickup" },
-  { key: "entity.ender_dragon.growl", category: "Entities", label: "Ender dragon growl" },
-  { key: "entity.player.levelup", category: "Entities", label: "Player level up" },
-  { key: "ambient.cave", category: "Ambient", label: "Cave ambience" },
-  { key: "ambient.crimson_forest.mood", category: "Ambient", label: "Crimson forest mood" },
-  { key: "weather.rain", category: "Weather", label: "Rain" },
-  { key: "weather.rain.above", category: "Weather", label: "Rain above" },
-  { key: "item.totem.use", category: "Items", label: "Totem of undying" },
-  { key: "item.trident.thunder", category: "Items", label: "Trident thunder" },
-];
 
 export const classNames = (...values: Array<string | false | null | undefined>) =>
   values.filter(Boolean).join(" ");

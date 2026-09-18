@@ -14,6 +14,7 @@ import {
   SoundGenerator,
   TablistGenerator,
 } from "./pages/Toolkit";
+import { GuidesPage, PluginsPage } from "./pages/Professional";
 
 function Router() {
   return (
@@ -26,6 +27,8 @@ function Router() {
       <Route path="/tablist-generator" component={TablistGenerator} />
       <Route path="/server-optimizer" component={ServerOptimizer} />
       <Route path="/downloads" component={DownloadsPage} />
+      <Route path="/plugins" component={PluginsPage} />
+      <Route path="/guides" component={GuidesPage} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
