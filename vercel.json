@@ -4,9 +4,14 @@
   "buildCommand": "pnpm run build:vercel",
   "outputDirectory": "dist/public",
   "installCommand": "pnpm install --frozen-lockfile=false",
+  "functions": {
+    "api/[...path].ts": {
+      "maxDuration": 15
+    }
+  },
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!api/).*)",
       "destination": "/index.html"
     }
   ],
