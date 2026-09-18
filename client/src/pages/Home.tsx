@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { useAuth } from "@/_core/hooks/useAuth";
+import { useAuth } from "../_core/hooks/useAuth";
 import { ArrowRight, Command, Search, Sparkles, Zap } from "lucide-react";
 import { useMemo, useState } from "react";
 import { AppShell, AccentTag } from "@/components/AppShell";

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Bookmark, BookOpen, Copy, Database, LogIn, Plus, Trash2 } from "lucide-react";
 import { startLogin } from "@/const";
 import { AppShell, AccentTag, PageIntro, SectionCard, copyText } from "@/components/AppShell";
-import { useAuth } from "@/_core/hooks/useAuth";
+import { useAuth } from "../_core/hooks/useAuth";
 import { trpc } from "@/lib/trpc";
 
 const inputClass = "h-10 w-full rounded-lg border border-white/[0.09] bg-black/20 px-3 text-sm text-slate-100 outline-none transition placeholder:text-slate-600 focus:border-emerald-300/45 focus:ring-2 focus:ring-emerald-300/10";
