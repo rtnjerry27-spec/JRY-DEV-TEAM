@@ -1,0 +1,7 @@
+node_modules
+.git
+.manus-logs
+screenshots
+dist
+attached_assets
+QA_NOTES.md
