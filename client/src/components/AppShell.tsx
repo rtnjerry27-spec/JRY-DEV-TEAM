@@ -1,8 +1,9 @@
 import { Link, useLocation } from "wouter";
-import { ChevronLeft, Code2, Copy, Home, Menu, Search, X } from "lucide-react";
+import { ChevronLeft, Code2, Copy, Home, Menu, Moon, Search, Sun, X } from "lucide-react";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { toast } from "sonner";
 import { tools, classNames } from "@/lib/toolkit";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const accentClasses = {
   emerald: "border-emerald-400/25 bg-emerald-400/10 text-emerald-300",
@@ -110,6 +111,7 @@ export function AppShell({ children }: { children: ReactNode }) {
   const [isOpen, setOpen] = useState(false);
   const [search, setSearch] = useState("");
   const [isCommandOpen, setCommandOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
   const matching = useMemo(
     () => tools.filter((tool) => `${tool.name} ${tool.description} ${tool.tag}`.toLowerCase().includes(search.toLowerCase())),
     [search],
@@ -162,8 +164,17 @@ export function AppShell({ children }: { children: ReactNode }) {
           <span className="flex items-center gap-2"><Search className="size-3.5" /> Search tools and commands</span>
           <kbd className="rounded border border-white/[0.08] bg-white/[0.04] px-1.5 py-0.5 font-mono text-[10px] text-slate-500">⌘ K</kbd>
         </button>
-        <div className="flex items-center gap-3 text-xs text-slate-500">
+        <div className="flex items-center gap-2 text-xs text-slate-500">
           <span className="hidden sm:inline">Minecraft Java Edition</span>
+          <button
+            type="button"
+            onClick={() => toggleTheme?.()}
+            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            className="inline-flex size-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] text-slate-400 transition hover:border-emerald-300/30 hover:bg-emerald-300/10 hover:text-emerald-200 active:scale-[.97]"
+          >
+            {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
+          </button>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-300/15 bg-emerald-300/5 px-2.5 py-1 text-[10px] font-semibold text-emerald-300"><span className="size-1.5 rounded-full bg-emerald-300 shadow-[0_0_8px_#55ff55]" /> JRY DEVERLOPER</span>
         </div>
       </header>

@@ -75,3 +75,45 @@
 @media (prefers-reduced-motion: no-preference) {
   .panel, [class*="group"] { transition-timing-function: cubic-bezier(.23,1,.32,1); }
 }
+
+/* Light mode keeps the JRY DEV emerald/cyan accents while lifting surfaces and text for daytime use. */
+.light {
+  --background: #f4f7f8;
+  --foreground: #17212b;
+  --card: #ffffff;
+  --card-foreground: #17212b;
+  --popover: #ffffff;
+  --popover-foreground: #17212b;
+  --secondary: #e8eef0;
+  --secondary-foreground: #334155;
+  --muted: #e8eef0;
+  --muted-foreground: #64748b;
+  --accent: #e8f7ef;
+  --accent-foreground: #17212b;
+  --border: rgba(15, 23, 42, .12);
+  --input: rgba(15, 23, 42, .14);
+  --ring: #159447;
+}
+
+.light body,
+.light html { background: #f4f7f8; }
+.light body { background-image: radial-gradient(circle at 45% -20%, rgba(21,148,71,.09), transparent 28rem); }
+.light .panel { border-color: rgba(15,23,42,.10); background: linear-gradient(145deg, rgba(255,255,255,.98), rgba(241,246,247,.98)); box-shadow: 0 12px 28px rgba(15,23,42,.08), inset 0 1px 0 rgba(255,255,255,.75); }
+.light .code-block { border-color: rgba(15,23,42,.10); background: #eef3f4; }
+.light header { background: rgba(244,247,248,.86); border-color: rgba(15,23,42,.10); }
+.light aside { background: rgba(255,255,255,.92); }
+.light .text-white { color: #17212b; }
+.light .text-slate-100 { color: #24313d; }
+.light .text-slate-200 { color: #334155; }
+.light .text-slate-300 { color: #475569; }
+.light .text-slate-400 { color: #64748b; }
+.light .text-slate-500 { color: #64748b; }
+.light .text-slate-600 { color: #78909c; }
+.light [class*="bg-[#090c11]"],
+.light [class*="bg-[#0d1016]"],
+.light [class*="bg-[#10141c]"],
+.light [class*="bg-[#11151e]"] { background-color: #f4f7f8; }
+.light [class*="border-white"] { border-color: rgba(15,23,42,.10); }
+.light [class*="bg-white/[0.04]"],
+.light [class*="bg-white/[0.035]"],
+.light [class*="bg-white/[0.025]"] { background-color: rgba(15,23,42,.045); }
