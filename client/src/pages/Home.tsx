@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { useAuth } from "@/_core/hooks/useAuth";
 import { ArrowRight, Command, Search, Sparkles, Zap } from "lucide-react";
 import { useMemo, useState } from "react";
 import { AppShell, AccentTag } from "@/components/AppShell";
@@ -11,6 +12,13 @@ const accent = {
 };
 
 export default function Home() {
+  // The useAuth hook provides authentication state.
+  // To implement login/logout, call logout(), or start login from an event
+  // handler: onClick={() => startLogin()} (imported from "@/const"). Never call
+  // startLogin() during render (no href={startLogin()}) — it mints a one-time
+  // nonce cookie and must run only at the moment of navigation.
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
   const [query, setQuery] = useState("");
   const filteredTools = useMemo(
     () => tools.filter((tool) => `${tool.name} ${tool.description} ${tool.tag}`.toLowerCase().includes(query.toLowerCase())),

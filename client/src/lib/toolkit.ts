@@ -1,6 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 import {
   Activity,
+  Bookmark,
   Box,
   BookOpen,
   Download,
@@ -114,6 +115,16 @@ export const tools: ToolDefinition[] = [
     tag: "Operations",
     icon: BookOpen,
     accent: "violet",
+  },
+  {
+    id: "presets",
+    path: "/presets",
+    name: "Saved Presets",
+    shortName: "Saved Presets",
+    description: "Persist tool configurations to your private JRY DEV workspace.",
+    tag: "Database",
+    icon: Bookmark,
+    accent: "emerald",
   },
 ];
 

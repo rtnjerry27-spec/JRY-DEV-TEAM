@@ -15,8 +15,9 @@ import {
   TablistGenerator,
 } from "./pages/Toolkit";
 import { GuidesPage, PluginsPage } from "./pages/Professional";
-
+import { PresetsPage } from "./pages/Presets";
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path="/" component={Home} />
@@ -29,6 +30,7 @@ function Router() {
       <Route path="/downloads" component={DownloadsPage} />
       <Route path="/plugins" component={PluginsPage} />
       <Route path="/guides" component={GuidesPage} />
+      <Route path="/presets" component={PresetsPage} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
