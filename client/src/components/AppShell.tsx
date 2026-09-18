@@ -164,7 +164,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         </button>
         <div className="flex items-center gap-3 text-xs text-slate-500">
           <span className="hidden sm:inline">Minecraft Java Edition</span>
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-300/15 bg-emerald-300/5 px-2.5 py-1 text-[10px] font-semibold text-emerald-300"><span className="size-1.5 rounded-full bg-emerald-300 shadow-[0_0_8px_#55ff55]" /> Systems nominal</span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-300/15 bg-emerald-300/5 px-2.5 py-1 text-[10px] font-semibold text-emerald-300"><span className="size-1.5 rounded-full bg-emerald-300 shadow-[0_0_8px_#55ff55]" /> JRY DEVERLOPER</span>
         </div>
       </header>
       <main className="px-4 py-7 lg:ml-64 lg:px-8 lg:py-9">{children}</main>
